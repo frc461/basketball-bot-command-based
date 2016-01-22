@@ -37,11 +37,11 @@ void RotateTurret::Initialize() {
 // Called repeatedly when this Command is scheduled to run
 void RotateTurret::Execute() {
 	switch (Robot::oi->getXboxController()->GetPOV(0)) {
-		case 90:
+		case XboxDPadLeft:
 	    	m_direction = kLeft;
 	    	break;
 
-		case 270:
+		case XboxDPadRight:
 			m_direction = kRight;
 			break;
 

@@ -37,14 +37,14 @@ bool buttonDown = false;
 float currentFirePower = kDefaultFirePower;
 void Shoot::Execute() {
 	std::shared_ptr<Joystick> xbox = Robot::oi->getXboxController();
-	if (xbox->GetRawAxis(3) > 0.5) {
+	if (xbox->GetRawAxis(XboxAxisRightTrigger) > 0.5) {
 		m_firePower = currentFirePower;
 	}
 	else {
 		m_firePower = 0.0f;
 	}
 
-	if (xbox->GetRawButton(4)) {
+	if (xbox->GetRawButton(XboxButtonY)) {
 		if (!buttonDown) {
 			buttonDown = true;
 			currentFirePower += kDefaultStep;
@@ -53,7 +53,7 @@ void Shoot::Execute() {
 			}
 		}
 	}
-	else if (xbox->GetRawButton(3)) {
+	else if (xbox->GetRawButton(XboxButtonX)) {
 		if (!buttonDown) {
 			buttonDown = true;
 			currentFirePower -= kDefaultStep;

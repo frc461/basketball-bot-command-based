@@ -34,8 +34,8 @@ void Drive::Initialize() {
 // Called repeatedly when this Command is scheduled to run
 void Drive::Execute() {
 	std::shared_ptr<Joystick> xbox = Robot::oi->getXboxController();
-	float left = xbox->GetRawAxis(1);
-	float right = xbox->GetRawAxis(5);
+	float left = xbox->GetRawAxis(XboxAxisLeftStickY);
+	float right = xbox->GetRawAxis(XboxAxisRightStickY);
 
 	if (abs(left) < DEADZONE) {
 		left = 0.0f;
