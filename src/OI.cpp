@@ -45,7 +45,7 @@ OI::OI() {
     SmartDashboard::PutData("RotateTurret: left", new RotateTurret(-1));
     SmartDashboard::PutData("RotateTurret: right", new RotateTurret(1));
     SmartDashboard::PutData("RotateTurret: stop", new RotateTurret(0));
-    SmartDashboard::PutData("Drive: Stop", new Drive(0, 0));
+//    SmartDashboard::PutData("Drive: Stop", new Drive(0, 0));
     SmartDashboard::PutData("DriveIntakeRollers: In", new DriveIntakeRollers(true));
     SmartDashboard::PutData("DriveIntakeRollers: Out", new DriveIntakeRollers(false));
     SmartDashboard::PutData("IntakeGroup: Up", new IntakeGroup(true));
