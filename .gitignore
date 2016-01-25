@@ -1,5 +1,7 @@
 sysProps.xml
 Debug/*
+*.cpp~
+*.h~
 
 # Compiled Object files
 *.slo
