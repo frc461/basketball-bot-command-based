@@ -22,6 +22,7 @@ std::unique_ptr<OI> Robot::oi;
 
 std::shared_ptr<ADXRS450_Gyro> Robot::gyro;
 std::shared_ptr<CameraServer> Robot::cameraServer;
+std::shared_ptr<NetworkTable> Robot::networkTable;
 
 void Robot::RobotInit() {
 	RobotMap::init();
@@ -50,6 +51,7 @@ void Robot::RobotInit() {
 	turnWithAngleAuto.reset(new TurnWithAngle(90));
 
 	CameraServer::GetInstance()->StartAutomaticCapture("cam0");
+	networkTable = NetworkTable::GetTable("myContoursReport");
 
 	printf("Robot inited");
   }

@@ -59,5 +59,6 @@ public:
 
 	static std::shared_ptr<ADXRS450_Gyro> gyro;
 	static std::shared_ptr<CameraServer> cameraServer;
+	static std::shared_ptr<NetworkTable> networkTable;
 };
 #endif
