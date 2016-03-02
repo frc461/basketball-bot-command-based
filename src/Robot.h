@@ -22,6 +22,7 @@
 #include "Commands/AutonomousCommand.h"
 #include "Commands/DriveStraight.h"
 #include "Commands/TurnWithAngle.h"
+#include "Commands/CenterGoal.h"
 #include "Subsystems/Aiming.h"
 #include "Subsystems/Conveyor.h"
 #include "Subsystems/Driving.h"
@@ -37,6 +38,7 @@ public:
 	std::unique_ptr<Command> autonomousCommand;
 	std::unique_ptr<Command> driveStraightAuto;
 	std::unique_ptr<Command> turnWithAngleAuto;
+	std::unique_ptr<Command> centerGoalAuto;
 
 	static std::unique_ptr<OI> oi;
 	LiveWindow *lw = LiveWindow::GetInstance();
@@ -60,5 +62,9 @@ public:
 	static std::shared_ptr<ADXRS450_Gyro> gyro;
 	static std::shared_ptr<CameraServer> cameraServer;
 	static std::shared_ptr<NetworkTable> networkTable;
+
+	const char *JAVA = "/usr/local/frc/JRE/bin/java";
+	char *GRIP_ARGS[5] = { "java", "-jar", "/home/lvuser/grip.jar",
+	            "/home/lvuser/project.grip", NULL };
 };
 #endif

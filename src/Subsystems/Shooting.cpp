@@ -41,7 +41,7 @@ void Shooting::InitDefaultCommand() {
 // Put methods for controlling this subsystem
 // here. Call these from Commands.
 void Shooting::shootAtSpeed(float speed) {
-	Shooting::kickupSpike->Set(speed > 0 ? Relay::kForward : Relay::kOff);
+//	Shooting::kickupSpike->Set(speed > 0 ? Relay::kForward : Relay::kOff);
 	Shooting::leftFireWheelJag->Set(-speed);
 	Shooting::rightFireWheelJag->Set(speed);
 }

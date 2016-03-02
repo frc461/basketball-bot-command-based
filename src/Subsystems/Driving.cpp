@@ -44,4 +44,8 @@ void Driving::InitDefaultCommand() {
 // here. Call these from Commands.
 void Driving::driveTank(float left, float right) {
 	robotDrive41->TankDrive(left, right);
+	SmartDashboard::PutNumber("Front left",  frontLeftDrive->Get());
+	SmartDashboard::PutNumber("Front right",  frontRightDrive->Get());
+	SmartDashboard::PutNumber("Back left",  backLeftDrive->Get());
+	SmartDashboard::PutNumber("Back right",  backRightDrive->Get());
 }
